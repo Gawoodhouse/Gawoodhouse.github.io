@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Game Over </title>
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+		<script>
+			function start(){
+				sjs.open("target",500,400);
+				var background = new sjs.Image("Images/sharpspikeball.png");
+				background.setSize(sjs.getWidth(),sjs.getHeight());
+				var death_text = new sjs.Text("Oops!", 28,"blue");
+				death_text.centerH();
+				var deathBtn = new sjs.Button("Try again?", function(){
+					window.location = "pong.html";
+				});
+				deathBtn.center();
+				
+			} //end start
+		</script>
+	</head>
+	<body onload="start()">
+		<h1> Game Over! </h1>
+
+		<div id="target" style="margin:auto;background:grey;"></div>
+	</body>
+</html>
